@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "Firebase API Key",
+        authDomain: "Firebase Auth Domain",
+        projectId: "Firebase project Id",
+        storageBucket: "Firebase Storage Bucket",
+        messagingSenderId: "Firebase Sender Id",
+        appId: "Firebase App Id",
+        measurementId: "Firebase measurement Id",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <title>Muhamad Hashir Khan - Portfolio</title>
+  </head>
+  <body>
+    <!-- ------------------- Header ------------------- -->
+    <header>
+      <nav>
+        <div class="container">
+          <a href="index.html">
+            <h1 class="logo">
+              <span>Hashir</span> <span class="small_text">Khan</span>
+            </h1>
+          </a>
+
+          <div>
+            <ul class="nav_list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Servives</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <button class="toggle_button" onclick="toggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="header_video">
+        <video muted loop autoplay class="video">
+          <source src="assets/MVI_5672.mp4" />
+        </video>
+
+        <div class="header_content">
+          <div class="content_section">
+            <h1>Hello I am <span class="change_name"></span></h1>
+            <p>Expert JavaScript and Flutter developer</p>
+          </div>
+
+          <div class="header_buttons">
+            <a href="https://www.fiverr.com/hashirkhan33" target="_fiverr"
+              >Hire me</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ------------------- Header End ------------------- -->
+
+    <!-- ------------------- About Section ------------------- -->
+    <section id="about">
+      <div class="about_section">
+        <h1>About my self</h1>
+        <span>Who I am</span>
+        <div class="row">
+          <div class="col image_col">
+            <img src="assets/pic.jpg" class="my_image" alt="" />
+          </div>
+          <div class="col">
+            <h3 class="about_heading">
+              Hello! I'm <span class="change_name about_change_name"></span>
+            </h3>
+            <p class="about_para">
+              My name is Hashir. I am here to serve my services as a Full stack
+              web developer. I am young, self motivated and enthusiastic
+              freelancer who works with full dedication inorder to fulfil the
+              requirements of clients. Customer satisfaction is my first
+              priority. I am an expert JavaScript and Flutter developer. I am
+              passionate about learning innovative technologies. LET'S START THE
+              WORK TOGETHER!
+            </p>
+            <div class="about_buttons">
+              <a
+                download="HashirKhanResume"
+                href="https://firebasestorage.googleapis.com/v0/b/hashirkhanportfolio.appspot.com/o/HashirkhanResume.pdf?alt=media&token=33d692b7-270b-4873-a845-253bcd0f9b08"
+                >Download CV</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ------------------- About Section End ------------------- -->
+
+    <!-- ------------------- Services Section ------------------- -->
+    <section id="services">
+      <div class="services_section">
+        <h1>My Services</h1>
+        <span>What I provide</span>
+        <div class="service_row">
+          <div class="service_col">
+            <div class="box">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="paint-brush"
+                class="svg-inline--fa fa-paint-brush fa-w-16 service_icon"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M167.02 309.34c-40.12 2.58-76.53 17.86-97.19 72.3-2.35 6.21-8 9.98-14.59 9.98-11.11 0-45.46-27.67-55.25-34.35C0 439.62 37.93 512 128 512c75.86 0 128-43.77 128-120.19 0-3.11-.65-6.08-.97-9.13l-88.01-73.34zM457.89 0c-15.16 0-29.37 6.71-40.21 16.45C213.27 199.05 192 203.34 192 257.09c0 13.7 3.25 26.76 8.73 38.7l63.82 53.18c7.21 1.8 14.64 3.03 22.39 3.03 62.11 0 98.11-45.47 211.16-256.46 7.38-14.35 13.9-29.85 13.9-45.99C512 20.64 486 0 457.89 0z"
+                ></path>
+              </svg>
+              <h3>Web designing</h3>
+              <p>
+                I can convert PSD, XD or Figma to HTML/CSS formate. I can design
+                trending themes, eye-cathing and beautiful UI. I am very crazy
+                about design new and trending themes that looks simple and als
+                attractive.
+              </p>
+            </div>
+          </div>
+          <div class="service_col">
+            <div class="box">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="code"
+                class="svg-inline--fa fa-code fa-w-20 service_icon"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"
+                ></path>
+              </svg>
+              <h3>Web development</h3>
+              <p>
+                I can develop impressive PWA(Progressive Web App) website with
+                firebase with MongoDB database, google and Facebook
+                authentication and utilizing Rest APIs, also develop node
+                backend.
+              </p>
+            </div>
+          </div>
+          <div class="service_col">
+            <div class="box">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="mobile-alt"
+                class="svg-inline--fa fa-mobile-alt fa-w-10 service_icon"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z"
+                ></path>
+              </svg>
+              <h3>App development</h3>
+              <p>
+                I can develop cross platform apps with firebase database and
+                Facebook and google authentication and utilizing Rest APIs. I
+                can develop e-commerce mobile app with CMS (redux) and backend
+                (firebase or node).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ------------------- Services Section End ------------------- -->
+
+    <!-- ------------------- Skills Section ------------------- -->
+    <section id="skills">
+      <div class="skills_section">
+        <h1>My Skills</h1>
+        <span>What I know</span>
+        <div class="skills_row">
+          <div class="skills_col">
+            <div class="about_my_skills">
+              <h2>My creative skills & experiences.</h2>
+              <p>
+                I'm experienced in MERN stack technology. I can develop a full
+                functional web and mobile application. I can also convert your
+                web app into PWA (Progressive web App) that is best for SEO. I
+                can also work with firebase realtime and firestore database,
+                firebase storage and social authentication like facebook, google
+                and etc. Quick learner, problem solver and leadership are my
+                other skills.
+              </p>
+            </div>
+          </div>
+          <div class="skills_col">
+            <div class="progress_container">
+              <div class="progress_heading">
+                <h3>HTML and CSS</h3>
+                <p>90%</p>
+              </div>
+              <div class="progress_bar">
+                <div class="progress progress_html_css"></div>
+              </div>
+            </div>
+
+            <div class="progress_container">
+              <div class="progress_heading">
+                <h3>JavaScript</h3>
+                <p>85%</p>
+              </div>
+              <div class="progress_bar">
+                <div class="progress progress_js"></div>
+              </div>
+            </div>
+
+            <div class="progress_container">
+              <div class="progress_heading">
+                <h3>React JS</h3>
+                <p>75%</p>
+              </div>
+              <div class="progress_bar">
+                <div class="progress progress_react_js"></div>
+              </div>
+            </div>
+
+            <div class="progress_container">
+              <div class="progress_heading">
+                <h3>React Native</h3>
+                <p>70%</p>
+              </div>
+              <div class="progress_bar">
+                <div class="progress progress_react_native"></div>
+              </div>
+            </div>
+
+            <div class="progress_container">
+              <div class="progress_heading">
+                <h3>Mongo DB</h3>
+                <p>75%</p>
+              </div>
+              <div class="progress_bar">
+                <div class="progress progress_mongo_db"></div>
+              </div>
+            </div>
+
+            <div class="progress_container">
+              <div class="progress_heading">
+                <h3>Node JS and Express JS</h3>
+                <p>80%</p>
+              </div>
+              <div class="progress_bar">
+                <div class="progress progress_node_js"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ------------------- Skills Section End ------------------- -->
+
+    <!-- ------------------- Portfolio Section ------------------- -->
+    <section id="portfolio">
+      <div class="portfolio_section">
+        <h1>My Portfolio</h1>
+        <span>What I have done</span>
+      </div>
+    </section>
+    <!-- ------------------- Portfolio Section End ------------------- -->
+
+    <!-- ------------------- Contact Section ------------------- -->
+    <section id="contact">
+      <div class="contact_section">
+        <h1>Contact Me</h1>
+        <span>Get in touch</span>
+        <div class="contact_row">
+          <div class="contact_col">
+            <h2 class="contact_heading">Get in Touch</h2>
+            <p>
+              If you want to Hire me or you have work for me or you have a
+              question about me you can freely contact me. I am always here to
+              answer your questions. I will give answer on your email.
+            </p>
+            <div class="icons">
+              <div class="icon_row">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="user"
+                  class="svg-inline--fa fa-user fa-w-14"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+                  ></path>
+                </svg>
+                <div class="info">
+                  <h4>Name</h4>
+                  <p>Muhammad Hashir Khan</p>
+                </div>
+              </div>
+              <div class="icon_row">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="map-marker-alt"
+                  class="svg-inline--fa fa-map-marker-alt fa-w-12"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 384 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
+                  ></path>
+                </svg>
+                <div class="info">
+                  <h4>Address</h4>
+                  <p>Karachi, Pakistan</p>
+                </div>
+              </div>
+              <div class="icon_row">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="envelope"
+                  class="svg-inline--fa fa-envelope fa-w-16"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
+                  ></path>
+                </svg>
+                <div class="info">
+                  <h4>Email</h4>
+                  <p>khnhashir555@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact_col">
+            <form>
+              <h3>Message me</h3>
+              <p class="error"></p>
+              <p class="success"></p>
+              <div class="name_email_section">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  class="name_input"
+                  required
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="email_input"
+                  required
+                />
+              </div>
+              <input
+                type="text"
+                placeholder="Subject"
+                class="subject_input"
+                required
+              />
+              <textarea
+                placeholder="Message"
+                cols="30"
+                required
+                rows="5"
+                class="message_input"
+              ></textarea>
+            </form>
+            <button onclick="submit()" class="contact_buttons">Submit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ------------------- Contact Section End ------------------- -->
+
+    <!-- ------------------- Footer Section ------------------- -->
+    <section>
+      <div class="footer">
+        <p>
+          Created By
+          <a
+            target="_fiverr"
+            href="https://www.fiverr.com/hashirkhan33"
+            class="author"
+            >Hashir Khan</a
+          >
+          | <i class="far fa-copyright"></i> 2020 All rights reserved.
+        </p>
+      </div>
+    </section>
+    <!-- ------------------- Footer Section End ------------------- -->
+  </body>
+  <script src="app.js"></script>
+</html>
